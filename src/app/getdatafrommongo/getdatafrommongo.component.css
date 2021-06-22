@@ -1,0 +1,26 @@
+
+  .example-container{
+   margin-left: 4%;
+   margin-right:4%
+}
+
+.form-container{
+    width: 40%; 
+  
+    margin-top: 3%;
+}
+.example-container .mat-form-field  {
+ 
+ width: 250px;
+}
+
+.icon-style
+{
+  border-radius: 25px;
+  border: none;
+  background-color: white;
+  color: rgb(132, 132, 230);
+}
+
+
+

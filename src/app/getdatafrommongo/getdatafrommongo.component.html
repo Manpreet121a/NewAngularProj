@@ -1,0 +1,85 @@
+<div class="example-container">
+    <div class="form-container">
+
+ <h3><u>Add Employee Details</u></h3>       
+ <br>
+<form [formGroup]="profileForm" (submit)="submit()">
+  
+    <mat-form-field appearance="fill">
+        <mat-label>Employee Code</mat-label>
+        <input matInput  type="text" formControlName="empcode">
+    
+      </mat-form-field>
+
+
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput  type="text" formControlName="name">
+    
+      </mat-form-field>
+  
+  <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Age</mat-label>
+        <input matInput  type="text" formControlName="age">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Select Department</mat-label>
+        <mat-select formControlName="department">
+          <mat-option value="Information Technology">Information Technology</mat-option>
+          <mat-option value="Human Resource">Human Resource</mat-option>
+          <mat-option value="DB">DB</mat-option>
+          <mat-option value="Resource management">Resource management</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Salary(INR)</mat-label>
+        <input matInput  type="text" formControlName="salary">
+      </mat-form-field>
+      <br>
+      <br>
+      <button mat-raised-button color="accent" type="submit">Submit</button>
+      <button mat-raised-button color="primary" type="reset" style="margin-left: 13%;" >Clear</button>
+  </form>
+</div>
+</div>
+<hr>
+<div class="example-container">
+
+<h3><u>Employee Details
+</u></h3>
+<br>
+      <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Employee Code</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Department</th>
+          <th>Salary</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of  dataEmpmongo">
+          <td>{{ employee.empcode }}</td>
+          <td>{{ employee.name }}</td>
+          <td> {{ employee.age }}</td>
+          <td> {{ employee.department }}</td>
+          <td> {{ employee.salary }}</td>
+          <td>
+            <button class="icon-style" (click)="editempdata(employee.empcode)" title="Edit" > <span  class="glyphicon glyphicon-pencil"></span></button>
+          </td>
+          <td>
+            <button class="icon-style" (click)="deleteempdata(employee.empcode)" title="Delete"> <span class="glyphicon glyphicon-trash"></span></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  
+</div>

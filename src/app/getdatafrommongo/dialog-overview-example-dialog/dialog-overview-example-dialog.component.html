@@ -1,0 +1,44 @@
+<h1 mat-dialog-title><u>Edit Employee Detail</u></h1>
+<div mat-dialog-content>
+<form [formGroup]="popupForm" >
+    <mat-label>Employee Code : {{Empcodeval}}</mat-label>
+   
+
+<br>
+<br>
+
+<mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput  type="text" formControlName="name">
+
+  </mat-form-field>
+
+<br>
+  <mat-form-field appearance="outline">
+    <mat-label>Age</mat-label>
+    <input matInput  type="text" formControlName="age">
+  </mat-form-field>
+  <br>
+  <mat-form-field appearance="outline">
+    <mat-label>Select Department</mat-label>
+    <mat-select formControlName="department">
+      <mat-option value="Information Technology">Information Technology</mat-option>
+      <mat-option value="Human Resource">Human Resource</mat-option>
+      <mat-option value="DB">DB</mat-option>
+      <mat-option value="Resource management">Resource management</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br>
+  <mat-form-field appearance="outline">
+    <mat-label>Salary(INR)</mat-label>
+    <input matInput  type="text" formControlName="salary">
+  </mat-form-field>
+
+<br>
+  <button mat-raised-button color="accent" class= "btn-class"  (click)="closedialg()">Close</button>&nbsp;
+  <button mat-raised-button color="primary" class="btn-class" (click)="updatedata()" cdkFocusInitial>Save</button>
+
+</form>
+</div>
+

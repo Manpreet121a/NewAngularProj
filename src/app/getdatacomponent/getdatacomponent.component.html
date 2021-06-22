@@ -1,0 +1,56 @@
+<div class="container" style="margin-top: 70px;">
+
+  <h3>Getting Data from Sql</h3>
+  <br>
+  <br>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+        
+          <th>Name</th>
+          <th>Designation</th>
+          <th>Salary</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of dataEmployee">
+  
+          <td>{{ employee.EmployeeName }}</td>
+          <td> {{ employee.Designation }}</td>
+          <td> {{ employee.Salary }}</td>
+          <td>
+            <a   style="border-radius: 25px;"> <span class="glyphicon glyphicon-pencil"></span></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+<br>
+<br>
+    <h3>Getting Data from Mongo</h3>
+<br>
+      <table class="table table-hover">
+      <thead>
+        <tr>
+      
+          <th>Name</th>
+          <th>Age</th>
+          <th>Department</th>
+          <th>Salary</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of  dataEmpmongo">
+  
+          <td>{{ employee.name }}</td>
+          <td> {{ employee.age }}</td>
+          <td> {{ employee.department }}</td>
+          <td> {{ employee.salary }}</td>
+          <td>
+            <a   style="border-radius: 25px;"> <span class="glyphicon glyphicon-pencil"></span></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
